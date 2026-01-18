@@ -1,69 +1,146 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: #F7F7F7;
 }
-img{
+
+img {
     width: 100%;
 }
 
-.container{
+
+.container {
     width: 1110px;
     margin: 0 auto;
 }
-.top-header{
+
+.top-header {
     display: flex;
     justify-content: space-between;
     background-color: #1B4961;
     align-items: center;
     padding: 1rem 2rem;
 }
-.open-hours{
+
+.open-hours {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.open-hours .open{
- display: flex;
- gap: 10px;
+
+.open-hours .open {
+    display: flex;
+    gap: 10px;
 }
-.open i{
+
+.open i {
     color: #FE2144;
 }
-.open p,.closed,p{
+
+.open p,
+.closed,
+p {
     color: #CECECB;
     font-size: 1rem;
 }
-.social{
+
+.social {
     display: flex;
     gap: 15px;
-}.social i{
-   color: #eaeaea;
-    font-size: 1rem; 
 }
-.hero{
-  background:
-    linear-gradient(
-      rgba(48, 74, 87, 0.8),
-      rgba(48, 74, 87, 0.8)
-    ),
-    url("https://preview.colorlib.com/theme/consultingbiz/assets/img/hero/hero2.jpg")
-    center / cover no-repeat;
-     height: 80vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.social i {
+    color: #eaeaea;
+    font-size: 1rem;
 }
-.title h1{
+
+/* header */
+header{
+    background-color: #FAFAF6;
+    height: 4.4rem;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+.desktop-menu{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.desktop-menu h1{
+    font-size: 1.5625rem;
+    font-weight: 700;
+}
+.menus-link {
+    display: flex;
+    gap: 20px;
+}
+.menus-link li{
+    list-style: none;
+}
+.menus-link li a{
+    text-decoration: none;
+    color: #2b2b2b;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.menus-link li a:hover{
+    color: #5F6AD4;
+}
+
+.humberger{
+    display: none;
+}
+.mobile-menu{
+    display: none;
+}
+.mobile-menu-actions{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+.btn-primary, .btn-secondary{
+    display: inline-block;
+    background-color: #5F6AD4;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.25rem;
+}
+.btn-secondary{
+    background-color: transparent;
+    border: solid 1px white;
+}
+
+/* hero */
+.hero {
+    background:
+        linear-gradient(rgba(48, 74, 87, 0.8),
+            rgba(48, 74, 87, 0.8)),
+        url("https://preview.colorlib.com/theme/consultingbiz/assets/img/hero/hero2.jpg") center / cover no-repeat;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1 {
     color: white;
     font-size: 4rem;
     font-weight: 800;
-    
+
 }
 
 .goal {
@@ -73,45 +150,49 @@ img{
     justify-content: center;
     gap: 30px;
 }
-.goal .content{
+
+.goal .content {
     display: flex;
     flex-direction: column;
     gap: 25px;
     justify-content: center;
 }
- .mision {
-  display: flex;
-  align-items: center;
-  align-items: center;
-  gap: 10px;
+
+.mision {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    gap: 10px;
 }
-.mision h2{
+
+.mision h2 {
     font-size: 1.75rem;
     color: #000A2D;
 }
-.content .p p{
-   font-size: 1.2rem;
-   line-height: 1.5rem;
-   color: #464D79;
+
+.content .p p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #464D79;
 }
 
 
-.mision p{
- border-block-start: 2px solid #EB566C;
- padding: 0px 2.12rem;
+.mision p {
+    border-block-start: 2px solid #EB566C;
+    padding: 0px 2.12rem;
 }
 
-.service{
-    min-height: 300px; 
-  background: url("https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/section_bg02.jpg")
-              center / cover no-repeat;
+.service {
+    min-height: 300px;
+    background: url("https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/section_bg02.jpg") center / cover no-repeat;
     height: 100vh;
     display: flex;
     justify-content: center;
     width: 100%;
     gap: 40px;
 }
-.img-service img{
+
+.img-service img {
     width: 510px;
     height: 542.23px;
     display: flex;
@@ -119,81 +200,95 @@ img{
     align-items: center;
     padding: 1.5rem;
 }
-.service-box{
+
+.service-box {
     display: flex;
     flex-direction: column;
-    padding: 4rem; 
+    padding: 4rem;
     gap: 30px;
 }
-.service-box .mision p{
- border-block-start: 2px solid #CECECB;
- padding: 0px 2.12rem;
+
+.service-box .mision p {
+    border-block-start: 2px solid #CECECB;
+    padding: 0px 2.12rem;
 }
-.service-box .mision h2{
+
+.service-box .mision h2 {
     color: #CECECB;
     font-size: 1.2rem;
     text-transform: uppercase;
-} 
-.service-box h1{
+}
+
+.service-box h1 {
     color: white;
     font-size: 3.2rem;
 }
-.service-box .pargraph{
+
+.service-box .pargraph {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.pargraph .p1{
+
+.pargraph .p1 {
     color: white;
     font-size: 1.24rem;
     line-height: 1.98rem;
 }
-.pargraph .p2{
-  color: #CECECB;
+
+.pargraph .p2 {
+    color: #CECECB;
     font-size: 1.18rem;
     line-height: 1.68rem;
 }
-.btn{
+
+.btn {
     width: 13rem;
-    padding-block: 1.18rem ;
+    padding-block: 1.18rem;
     background-color: #FE2144;
     border: none;
     color: white;
     font-size: 1.22rem;
 }
-.members{
+
+.members {
     margin-block: 4rem;
 }
+
 .profesional {
     display: flex;
-    align-items: center; 
+    align-items: center;
     gap: 10px;
 
 }
-.profesional p{
+
+.profesional p {
     border-block-start: 2px solid #EB566C;
     padding: 0px 1.56rem;
 }
-.profesional h3{
+
+.profesional h3 {
     color: #EB566C;
     font-weight: 400;
     font-size: 1.56rem;
     margin-block: 1.24rem;
 }
-.members .team{
+
+.members .team {
     font-size: 3.2rem;
     font-weight: 600;
     color: #092C3F;
 }
+
 .members .grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-block: 1rem;
 }
 
 
-.content .description{
+.content .description {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -201,21 +296,23 @@ img{
     gap: 10px;
 }
 
-.description h2{
+.description h2 {
     font-size: 1.54rem;
     color: #092C3F;
     font-weight: 600;
 }
-.description .profesional h2{
+
+.description .profesional h2 {
     font-size: 0.9rem;
     color: #EB566C;
     font-weight: 400;
 }
-.description .profesional p{
-        padding: 0px 1.20rem;
+
+.description .profesional p {
+    padding: 0px 1.20rem;
 }
 
-.testimonials{
+.testimonials {
     background: url("https://preview.colorlib.com/theme/consultingbiz/assets/img/gallery/section_bg04.jpg");
     height: 100vh;
     width: 100%;
@@ -224,6 +321,7 @@ img{
     justify-content: center;
     background-color: #FFFFFF;
 }
+
 .testimonail {
     display: flex;
     flex-direction: column;
@@ -231,47 +329,56 @@ img{
     align-items: center;
     gap: 20px;
 }
-.testimonail i{
+
+.testimonail i {
     color: #EB566C;
     font-size: 7rem;
 }
-.testimonail p{
+
+.testimonail p {
     text-align: center;
     color: #CECECB;
     font-size: 1.25rem;
     line-height: 1.40rem;
 }
-.testimonail .client{
+
+.testimonail .client {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-top: 30px;
 }
-.client .title{
+
+.client .title {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-.client .title h2{
-     font-size: 1.87rem;
-     font-weight: 600;
-     color: #EB566C;
+
+.client .title h2 {
+    font-size: 1.87rem;
+    font-weight: 600;
+    color: #EB566C;
 }
-.client .title p{
-   color: #7c7e89;
+
+.client .title p {
+    color: #7c7e89;
 
 }
-.testimonail .client img{
+
+.testimonail .client img {
     width: 80px;
 }
-.boxs{
+
+.boxs {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-top: -4rem;
     margin-bottom: 2rem;
 }
-.boxs .box{
+
+.boxs .box {
     background-color: white;
     box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2.5rem 1rem;
@@ -281,24 +388,30 @@ img{
     justify-content: center;
     border: 1px solid #d8d8d8;
 }
-.boxs .box3{
+
+.boxs .box3 {
     background-color: #EB566C;
     border: 10px solid white;
 }
-.box3 h2{
+
+.box3 h2 {
     color: white;
 }
-.box3 .p{
+
+.box3 .p {
     color: #ffffff;
 }
-.box h2{
+
+.box h2 {
     font-size: 3rem;
 }
-.box p{
+
+.box p {
     color: #7c7e89;
     font-size: 1rem;
 }
-.client-logo{
+
+.client-logo {
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -306,13 +419,15 @@ img{
     align-items: center;
     background-color: #F7F7F7;
 }
-.client-logo img{
+
+.client-logo img {
     width: 175px;
     height: 50px;
 }
-footer{
+
+footer {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-around;
     /* align-items: center; */
     padding: 3rem 2rem;
@@ -320,61 +435,73 @@ footer{
     height: 70vh;
     margin-top: 7rem;
 }
-footer .consulting{
+
+footer .consulting {
 
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-.consulting h2{
+
+.consulting h2 {
     color: #CECECB;
     font-size: 1.86rem;
 }
-.consulting p{
+
+.consulting p {
     color: #bdbdc1;
     line-height: 1.56rem;
 }
- .location{
+
+.location {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.location h2{
+
+.location h2 {
     color: #CECECB;
     font-weight: 500;
     text-transform: uppercase;
     font-size: 1.25rem;
 }
-.location ul{
+
+.location ul {
     display: flex;
     flex-direction: column;
     gap: 19px;
 }
-ul li a{
+
+ul li a {
     text-decoration: none;
     color: #CECECB;
 }
+
 footer .subscribe {
 
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-.subscribe h2{
+
+.subscribe h2 {
     color: #CECECB;
     font-weight: 500;
     text-transform: uppercase;
     font-size: 1.25rem;
 }
-.subscribe p{
+
+.subscribe p {
     color: #bdbdc1;
     line-height: 1.86rem;
 }
+
 .input-btn {
     display: flex;
     gap: 10px;
 }
-.input-btn input{
+
+.input-btn input {
     width: 100%;
     padding: 1rem 3rem;
     background-color: #101720;
@@ -382,7 +509,8 @@ footer .subscribe {
     color: #9FA6A9;
     padding-left: 20px;
 }
-.input-btn button{
+
+.input-btn button {
     width: 70%;
     padding: rem 1rem;
     background: none;
@@ -395,91 +523,153 @@ footer .subscribe {
 
 
 @media (max-width: 768px) {
+/* humbergur */
+header{
+        height: 0;
+    }
+     li{
+        z-index: 11111;
+    }
+    .desktop-menu{
+        display: none;
+    }
+    .humberger{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background-color: #5F6AD4;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        top: 7%;
+        right: 5%;
+        font-size: 2rem;
+    }
+    .mobile-menu{
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        background-color: #2b2b2b;
+        inset: 0 0 0 0;
+        transform: translateX(0%);
+        transition: transform 350ms ease-in-out;
+    } 
+    .mobile-menu[data-visible="false"] {
+          transform: translateX(100%);
+    } 
 
-  /* container */
-  .container{
-    width: 100%;
-    padding: 0 1rem;
-  }
+    .humberger li[data-visible="true"] {
+           display: block;
 
-  /* top header */
-  .top-header{
-    display: none;
-  }
+    } 
+     .humberger li[data-visible="false"] {
+           display: none;
 
-  /* hero */
-  .hero{
-    height: 60vh;
-    padding: 1rem;
-    text-align: center;
-  }
-  .title h1{
-    font-size: 2.2rem;
-  }
+    } 
+    
+   
+    .mobile-menu .navigation{
+        display: flex;
+        align-items: center;
+        margin-top: 5rem;
+        gap: 2.5rem;
+        flex-direction: column;
+        width: 100%;
 
-  /* goal section */
-  .goal{
-    height: auto;
-    padding: 2rem 1rem;
-  }
+    } .mobile-menu .navigation .menus-link{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .mobile-menu h1{
+        font-size: 2.3125rem;
+        font-weight: 700;
+        border-bottom: 1px solid white;
+        padding: 17px;
+        color: white;
+    }
+    .mobile-menu  a{
+        color: white !important;
+    }
 
-  /* service section */
-  .service{
-    flex-direction: column;
-    height: auto;
-    padding: 2rem 1rem;
-  }
-  .img-service img{
-    width: 100%;
-    height: auto;
-  }
-  .service-box{
-    padding: 1.5rem;
-  }
-  .service-box h1{
-    font-size: 2rem;
-  }
 
-  /* members grid */
-  .members .grid{
-    grid-template-columns: repeat(1, 1fr);
-  }
+    /* top header */
+    .top-header {
+        display: none;
+    }
 
-  /* testimonials */
-  .testimonials{
-    height: auto;
-    padding: 3rem 1rem;
-  }
-  .testimonail p{
-    font-size: 1rem;
-  }
+    /* hero */
+    .hero {
+        height: 60vh;
+        padding: 1rem;
+        text-align: center;
+    }
 
-  /* boxes section */
-  .boxs{
-    grid-template-columns: repeat(1,1fr);
-    margin-top: 2rem;
-  }
+    .title h1 {
+        font-size: 2.2rem;
+    }
 
-  /* client logos */
-  .client-logo{
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-block: 4rem 2rem;
-  }
+    /* goal section */
+    .goal {
+        height: auto;
+        padding: 2rem 1rem;
+    }
 
-  /* footer */
-  footer{
-    grid-template-columns: repeat(1,1fr);
-    height: auto;
-    gap: 2rem;
-  }
+    /* service section */
+    .service {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .img-service img {
+        width: 100%;
+        height: auto;
+    }
+
+    .service-box {
+        padding: 1.5rem;
+    }
+
+    .service-box h1 {
+        font-size: 2rem;
+    }
+
+    /* members grid */
+    .members .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* testimonials */
+    .testimonials {
+        height: auto;
+        padding: 3rem 1rem;
+    }
+
+    .testimonail p {
+        font-size: 1rem;
+    }
+
+    /* boxes section */
+    .boxs {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 2rem;
+    }
+
+    /* client logos */
+    .client-logo {
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-block: 4rem 2rem;
+    }
+
+    /* footer */
+    footer {
+        grid-template-columns: repeat(1, 1fr);
+        height: auto;
+        gap: 2rem;
+    }
 
 }
-
-
-
-
-
-
- 
-
